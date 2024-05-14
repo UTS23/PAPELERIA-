@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papelería Awesome</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Estilos personalizados */
+        body {
+            background-color: #f5f5f5;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .card {
+            border-radius: 10px; /* Bordes redondeados */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra */
+            transition: 0.3s;
+        }
+        .card:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada al pasar el mouse */
+        }
+        /* Estilos de la barra de navegación */
+        .navbar {
+            background-color: #97CF70;
+        }
+        .navbar-item {
+            color: white !important;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="#" th:href="@{/}">
+            Papelería Awesome
+        </a>
+    </div>
+
+    <div class="navbar-menu">
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <div class="buttons">
+                    <a class="button is-primary" href="/api/loginAdmin">
+                        Ingresar como Admin
+                    </a>
+                    <a class="button is-primary" th:href="@{/clientes/cliente/login}">
+                        Ingresar como Cliente
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="columns is-centered">
+        <div class="column is-half">
+            <div class="card">
+                <header class="card-header">
+                    <p class="card-header-title">
+                        Bienvenido a Papelería Awesome
+                    </p>
+                </header>
+                <div class="card-content">
+                    <div class="content">
+                        <p>Somos tu tienda de papelería favorita. Encuentra todo lo que necesitas para tus proyectos escolares y de oficina.</p>
+                    </div>
+                </div>
+                <footer class="card-footer">
+                    <a href="#" class="card-footer-item">Ver Catálogo</a>
+                    <a href="#" class="card-footer-item">Contacto</a>
+                </footer>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
